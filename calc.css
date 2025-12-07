@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainColor:rgba(41, 84, 96, 0.984);
+    --background: rgba(56, 91, 101, 0.625);
+}
+.contaner{
+    background-color: var(--background);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.contaner .calc{
+    width:300px;
+    background: var(--mainColor);
+    border-radius: 10px;
+    padding: 15px;
+     box-shadow:-8px -8px  15px rgba(255, 255, 255, 0.101),5px 5px 15px rgba(0, 0, 0, 0.195);
+}
+.contaner .calc .display {
+   width: 100%;
+   padding: 38px;
+   background-color:rgba(40, 93, 108, 0.323) ;
+   border: none;
+   outline: none;
+   margin-bottom: 5px;
+   border-radius: 5px;
+  text-align: left;
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+  overflow: auto;
+}
+.contaner .calc .buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 8px;
+}
+.contaner .calc .buttons button:not(.equal){
+ width: 60px;
+ height: 60px;
+
+}
+.contaner .calc .buttons button{
+ border-radius: 10px;
+ box-shadow:-8px -8px  15px rgba(255, 255, 255, 0.101),5px 5px 15px rgba(0, 0, 0, 0.195);
+ font-family: "Cairo",Arial, Helvetica, sans-serif;
+ font-size: larger;
+ font-weight: bold;
+ user-select: none;
+}
+.contaner .calc .buttons button:hover{
+background-color: rgba(255, 255, 255, 0.858);
+}
+.contaner .calc .buttons .equal{
+   grid-column: 3/5;
+ background-color: rgb(234, 122, 42);
+
+}
+.contaner .calc .buttons .equal:hover{
+    background-color: rgba(234, 122, 42, 0.934); 
+}
